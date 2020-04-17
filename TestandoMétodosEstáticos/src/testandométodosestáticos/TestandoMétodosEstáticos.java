@@ -18,6 +18,8 @@ public class TestandoMétodosEstáticos {
         ConstruindoObjetos();
         DestruindoObjetos();
         estatico();
+        NewClass teste = new NewClass();
+        System.out.println("a velocidade do carro 1 é "+teste.velocidade);
     }
     
     public static void ConstruindoObjetos(){
