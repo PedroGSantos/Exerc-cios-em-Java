@@ -24,6 +24,15 @@ public class TestandoMétodosEstáticos {
     
     public static void ConstruindoObjetos(){
         Veiculo carro1 = new Veiculo();
+        Veiculo[] c = new Veiculo[2];
+        c[0] = new Veiculo();
+        c[0].velocidade = 7;
+        c[1] = new Veiculo();
+        c[1].velocidade = 5;
+        
+        System.out.println("a velocidade do carro na posição 1 é " + c[0].velocidade);
+        System.out.println("a velocidade do carro na posição 2 é " + c[1].velocidade);
+        
         carro1.velocidade = 5;
         System.out.println("a velocidade do carro 1 é " + carro1.velocidade);
 
