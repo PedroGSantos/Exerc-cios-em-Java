@@ -31,46 +31,8 @@ public class TestandoHerança {
             System.out.println("A cor do " + f.nome + " é " + f.getColor() + " e a area é " + f.area());
         }
     }
-    
+     
     
           
 }
-abstract class Forma{
-    String color;
-    String nome;
-        
-    void setColor(String color){
-        this.color = color;
-    }
-        
-    String getColor() {
-        return color;
-    }
-    
-    public abstract double area();
-}
-    
-class quadrado extends Forma {
-    double l;
-    
-    quadrado(double l){
-        this.l = l;
-    }
-    @Override
-    public double area(){
-        return Math.pow(l,2);
-    }
-}
 
-class circulo extends Forma {
-    double r;
-      
-    circulo(double r){
-        this.r = r;
-    }
-    
-    @Override
-    public double area(){
-        return Math.PI * Math.pow(r,2);
-    }
-}
