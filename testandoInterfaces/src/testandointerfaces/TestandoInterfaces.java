@@ -18,6 +18,7 @@ public class TestandoInterfaces {
         //implementando interface numa classe comum
         roda r = new roda();
         r.getVelocidade(5);
+        r.MostrarPecas();
         veiculo teste = new veiculo();
         //implementando classe anonima a partir de interface
         teste.coletar(new carro() {
@@ -36,18 +37,23 @@ interface carro{
 }
 
 class roda implements carro{
-    //implementando classes aninhadas
-   
     
-    class peças implements carro{
+    double v;
+    
+    //implementando classes aninhadas    
+    class peças{
 
-        @Override
-        public void getVelocidade(double vel) {
-          
+        double numeroPecas(double v){
+            return v + 50;
         }
         
     }
-    double v;
+    
+    public void MostrarPecas(){
+      peças p = new peças();
+      System.out.println(p.numeroPecas(v));
+    }
+   
     @Override
     public void getVelocidade(double vel){
         v = vel;
@@ -57,6 +63,7 @@ class roda implements carro{
 }
 
 class veiculo {
+    
     public void coletar(carro colvel, double ve){
        colvel.getVelocidade(ve);
     }
