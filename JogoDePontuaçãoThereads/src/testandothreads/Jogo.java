@@ -28,9 +28,26 @@ public class Jogo {
            
 }
 class jogadores extends Thread{
-    String name;
-    double score;
-    long delay=20;
+    private String name;
+    private double score;
+    private long delay=20;
+
+ 
+    public double getScore() {
+        return score;
+    }
+
+    public void setScore(double score) {
+        this.score = score;
+    }
+
+    public long getDelay() {
+        return delay;
+    }
+
+    public void setDelay(long delay) {
+        this.delay = delay;
+    }
     
     jogadores(String name, double score){
         this.name = name;
