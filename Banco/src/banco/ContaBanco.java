@@ -101,7 +101,7 @@ public class ContaBanco {
     
     public void depositar(float deposit){
         if(status==true){
-            setSaldo(deposit);
+            setSaldo(saldo + deposit);
             System.out.println("O dinheiro foi depositado com sucesso");
         }
         else{
